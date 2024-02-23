@@ -15,10 +15,10 @@ public class LoginDemo {
 			new Password();
 			Class.forName("com.mysql.cj.jdbc.Driver"); // class named Class, forName is a static method
 			String url = "jdbc:mysql://localhost:3306/javaDemo";
-			Connection connection = DriverManager.getConnection(url, "root", Password.getPass());
+			Connection connection = DriverManager.getConnection(url, "root", Password.getPass()); // Connection here is an interface
 			System.out.println("Connection Established");
-			Statement statement = connection.createStatement();
-//			ResultSet resultSet = statement.executeQuery("select * from login");
+			Statement statement = connection.createStatement(); // Statement here is an interface
+//			ResultSet resultSet = statement.executeQuery("select * from login"); // ResultSet is an interface
 //			System.out.println("Username\tPassword");
 //			while(resultSet.next()) {
 //				System.out.println(resultSet.getString(1)+ "\t\t"+ resultSet.getString(2));
